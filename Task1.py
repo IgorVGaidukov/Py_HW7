@@ -11,3 +11,26 @@
 в указанном порядке (красный, желтый, зеленый).
 Проверить работу примера, создав экземпляр и вызвав описанный метод.
 """
+
+from time import sleep
+
+
+class TrafficLight:
+
+    def __init__(self):
+        self.__color = 'красный'
+
+    def running(self):
+        self.__color = 'красный'
+        print(self.__color)
+        sleep(7)
+        self.__color = 'желтый'
+        print(self.__color)
+        sleep(2)
+        self.__color = 'зеленый'
+        print(self.__color)
+        sleep(5)
+
+
+tl = TrafficLight()
+tl.running()
